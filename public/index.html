@@ -14,8 +14,9 @@
     </div>
     <hr />
     <div
-      data-controller="clipboard"
+      data-controller="clipboard effects"
       data-clipboard-supported-class="clipboard--supported"
+      data-action="clipboard:copy->effects#flash"
     >
       PIN:
       <input data-clipboard-target="source" type="text" value="1234" readonly />
@@ -37,7 +38,10 @@
       data-clipboard-supported-class="clipboard--supported"
     >
       PIN: <textarea data-clipboard-target="source" readonly>3773</textarea>
-      <a href="#" data-action="click->clipboard#copy" class="clipboard-button"
+      <a
+        href="#"
+        data-action="click->clipboard#copyForAnchor"
+        class="clipboard-button"
         >Copy to Clipboard</a
       >
     </div>

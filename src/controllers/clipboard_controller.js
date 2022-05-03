@@ -20,10 +20,11 @@ export default class extends Controller {
   }
 
   copy() {
+    this.dispatch('copy', { detail: { content: this.source } });
     navigator.clipboard.writeText(this.source);
   }
 
-  copy(event) {
+  copyForAnchor(event) {
     event.preventDefault();
     this.sourceTarget.select();
     document.execCommand('copy');
